@@ -20,11 +20,9 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+		window.setTimeout(function() {
+			$body.removeClass('is-preload');
+		}, 1000);
 
 	// Mobile?
 		if (browser.mobile)
