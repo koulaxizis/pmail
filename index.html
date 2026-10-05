@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pmail — Pirate Mail</title>
+<meta name="description" content="pmail stands for Pirate Mail. Why? Because. The email server of a true netizen, hosted in the high seas of the internet.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="pmail — Pirate Mail">
+<meta property="og:description" content="The email server of a true netizen. Hosted in the high seas of the internet.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pmail.gr">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='20' width='52' height='38' rx='4' fill='%236d4aff'/%3E%3Cpath d='M10 24l22 17 22-17' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='12' r='9' fill='%23fff'/%3E%3Ccircle cx='28.5' cy='10.5' r='2' fill='%23222'/%3E%3Ccircle cx='35.5' cy='10.5' r='2' fill='%23222'/%3E%3Cpath d='M26 16h12l-3 4h-6z' fill='%23222'/%3E%3Cpath d='M32 15v2' stroke='%23222' stroke-width='1.6'/%3E%3Crect x='32' y='1' width='2' height='7' fill='%23fff' transform='rotate(45 33 4)'/%3E%3C/svg%3E">
+
+<style>
+:root {
+  --bg: #0f0e11;
+  --fg: #e8e6e3;
+  --muted: #9a96a0;
+  --accent: #6d4aff;
+  --accent-hover: #8b6bff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1.25rem;
+}
+
+main {
+  text-align: center;
+  max-width: 560px;
+  width: 100%;
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+main {
+  opacity: 0;
+  animation: fade-in 0.4s ease-out 0.1s forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+main > p:first-of-type {
+  font-size: 1.05rem;
+  color: var(--fg);
+  margin-bottom: 1.75rem;
+}
+
+main section p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+ul.projects {
+  list-style: none;
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+ul.projects a {
+  color: var(--fg);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+ul.projects a:hover,
+ul.projects a:focus-visible {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}
+
+.coffee {
+  margin-bottom: 2rem;
+}
+
+.coffee a {
+  color: var(--accent-hover);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px dotted var(--accent);
+}
+
+.coffee a:hover,
+.coffee a:focus-visible {
+  color: #fff;
+}
+
+.signoff {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.dots {
+  color: var(--muted);
+  font-size: 1.25rem;
+  letter-spacing: 0.6em;
+  margin-top: 2.25rem;
+}
+</style>
+</head>
+<body>
+
+<main>
+  <div class="title">🏴‍☠️ pmail</div>
+
+  <p class="subtitle">hosted in the high seas of the internet</p>
+
+  <p>Seems like you have found pmail,<br>the email server of a true netizen.</p>
+
+  <section>
+    <p>pmail stands for Pirate Mail.<br>Why? Because.</p>
+
+    <p>There is not much to see here, but you can visit some other exciting projects:</p>
+
+    <ul class="projects">
+      <li><a href="https://koulaxizis.gr" target="_blank" rel="noopener noreferrer">koulaxizis.gr</a></li>
+      <li><a href="https://glarolykoi.net" target="_blank" rel="noopener noreferrer">glarolykoi.net</a></li>
+      <li><a href="https://useoros.online/" target="_blank" rel="noopener noreferrer">useoros.online</a></li>
+      <li><a href="https://noxpress.tech" target="_blank" rel="noopener noreferrer">noxpress.tech</a></li>
+      <li><a href="https://nulljsfx.tech" target="_blank" rel="noopener noreferrer">nulljsfx.tech</a></li>
+    </ul>
+
+    <p class="coffee">You can also buy me a coffee:<br><a href="https://ko-fi.com/koulaxizis" target="_blank" rel="noopener noreferrer">ko-fi.com/koulaxizis</a> ☕</p>
+
+    <p class="signoff">That's all for now!<br>See you around...</p>
+  </section>
+
+  <div class="dots">· · ·</div>
+</main>
+
+</body>
+</html>
