@@ -1,0 +1,155 @@
+:root {
+  --bg: #0f0e11;
+  --fg: #e8e6e3;
+  --muted: #9a96a0;
+  --accent: #6d4aff;
+  --accent-hover: #8b6bff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  /* Nunito has no Greek glyphs; M PLUS Rounded 1c fills them in with a similar rounded look */
+  font-family: "Nunito", "M PLUS Rounded 1c", "Segoe UI", system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1.25rem;
+}
+
+main {
+  text-align: center;
+  max-width: 560px;
+  width: 100%;
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+main {
+  opacity: 0;
+  animation: fade-in 0.4s ease-out 0.1s forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ===== LANGUAGE SWITCH ===== */
+.lang-switch {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.lang-switch a {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #2a2730;
+  border-radius: 999px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.lang-switch a:hover,
+.lang-switch a:focus-visible {
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.title {
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.subtitle + p {
+  font-size: 1.05rem;
+  color: var(--fg);
+  margin-bottom: 1.75rem;
+}
+
+main section p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+ul.projects {
+  list-style: none;
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+ul.projects a {
+  color: var(--fg);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+ul.projects a:hover,
+ul.projects a:focus-visible {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}
+
+.coffee {
+  margin-bottom: 2rem;
+}
+
+.coffee a,
+.home a {
+  color: var(--accent-hover);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px dotted var(--accent-hover);
+}
+
+.coffee a:hover,
+.coffee a:focus-visible,
+.home a:hover,
+.home a:focus-visible {
+  color: #fff;
+}
+
+.signoff {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.dots {
+  color: var(--muted);
+  font-size: 1.25rem;
+  letter-spacing: 0.6em;
+  margin-top: 2.25rem;
+}
